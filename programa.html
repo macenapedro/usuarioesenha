@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+    document.write("<br><hr><br>");
+}
+
+function mostra(frase) {
+    document.write("<big>" + frase + "</big>");
+    pulaLinha();
+}
+
+	
+	var usuario = ("Pedro");
+	var senha = 123
+	var tentativa = 1
+	var maximoTentativa = 3
+	
+	while (tentativa <= maximoTentativa) {
+	
+	var nomeUsuario = prompt("Digite o seu usuário.");
+	var senhaUsuario = prompt(nomeUsuario + ", digite sua senha.");
+	
+	if(nomeUsuario == usuario && senhaUsuario == senha) {
+	
+	mostra("Bem vindo, " + usuario);
+	tentativa = maximoTentativa
+	
+	} else {
+	
+	if(tentativa == 3) {
+	
+	alert("Você excedeu!");
+	
+	
+	} else {
+	alert("Tente novamente!");
+	
+	}
+	}
+	
+	tentativa = tentativa + 1;
+	}
+</script>
